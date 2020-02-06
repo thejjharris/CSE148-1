@@ -1,6 +1,8 @@
 package arrays;
 
 public class Demo1 {
+	int x;
+	double y;
 
 	public static void main(String[] args) {
 //		// arrays: one variable to store multiple values of the same type
