@@ -20,7 +20,6 @@ public class Chair { // class header
 		price = newPrice;
 		hasUSBSound = newHasUSBSound;
 		isSleepable = newIsSleepable;
-		
 	}
 	
 	public String getColor() {
