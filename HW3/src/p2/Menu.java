@@ -11,7 +11,7 @@ public class Menu {
 	
 	public void showMenu() {
 		for(int i = 0; i < numberOfItems; i++) {
-			System.out.printf("%-5d%10s%10.2f\n", menu[i].getItemNumber(), menu[i].getItemDescription(), menu[i].getItemPrice());
+			System.out.printf("%-5d%-10s%10.2f\n", menu[i].getItemNumber(), menu[i].getItemDescription(), menu[i].getItemPrice());
 		}
 	}
 

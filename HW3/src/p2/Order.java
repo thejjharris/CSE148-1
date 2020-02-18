@@ -47,7 +47,7 @@ public class Order {
 		
 		double total = subtotal + subtotal;
 		for(int i = 0; i < numberOfItems; i++) {
-			System.out.printf("%-4d%10s%10.2f%5d%10.2f\n", order[i].getItemNumber(), order[i].getItemDescription(), order[i].getItemPrice(), order[i].getItemQty(), order[i].getItemCharge());
+			System.out.printf("%-4d%-10s%10.2f%5d%10.2f\n", order[i].getItemNumber(), order[i].getItemDescription(), order[i].getItemPrice(), order[i].getItemQty(), order[i].getItemCharge());
 		}
 		System.out.println("------------------------------------------");
 		System.out.printf("%-10s%29.2f\n", "Subtotal", subtotal);
