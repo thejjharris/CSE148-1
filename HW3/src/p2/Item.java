@@ -8,7 +8,6 @@ public class Item {
 	private double itemCharge;
 	
 	public Item(int itemNumber, String itemDescription, double itemPrice) {
-		super();
 		this.itemNumber = itemNumber;
 		this.itemDescription = itemDescription;
 		this.itemPrice = itemPrice;

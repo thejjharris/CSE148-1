@@ -10,10 +10,19 @@ public class Order {
 	private double total;
 	private Menu menu;
 	
+	private int orderId;
+	
+	private static int idCounter = 1;
+	
 	public Order(int maxSize, Menu menu) {
+		orderId = idCounter++;
 		order = new Item[maxSize];
 		numberOfItems = 0;
 		this.menu = menu;
+	}
+	
+	public int getOrderId() {
+		return orderId;
 	}
 	
 	public Item[] createOrder() {
@@ -39,13 +48,14 @@ public class Order {
 	}
 	
 	public void showCheck() {
+		final double TAX_RATE = 0.08625;
 		double subtotal = 0;
 		for(int i = 0; i < numberOfItems; i++) {
 			subtotal += order[i].getItemCharge();
 		}
-		double taxes = subtotal * 0.08625;
-		
+		double taxes = subtotal * TAX_RATE;
 		double total = subtotal + subtotal;
+		System.out.println("Order ID: " + orderId);
 		for(int i = 0; i < numberOfItems; i++) {
 			System.out.printf("%-4d%-10s%10.2f%5d%10.2f\n", order[i].getItemNumber(), order[i].getItemDescription(), order[i].getItemPrice(), order[i].getItemQty(), order[i].getItemCharge());
 		}
